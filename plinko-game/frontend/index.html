@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plinko Game</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div id="loading-screen">
+        <img src="assets/images/loading.gif" alt="Loading...">
+    </div>
+    
+    <div id="game-container">
+        <!-- Dropdowns for settings -->
+        <div class="controls">
+            <select id="risk-level">
+                <option value="low">Low</option>
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>
+
+            <select id="row-count">
+                <option value="8">8 Rows</option>
+                <option value="12">12 Rows</option>
+                <option value="16">16 Rows</option>
+            </select>
+            
+            <input type="number" id="bet-amount" placeholder="Bet Amount">
+            <button id="play-button">Play</button>
+        </div>
+
+        <!-- Plinko board display -->
+        <div id="plinko-board"></div>
+
+        <!-- Currency counter -->
+        <div id="currency-counter">
+            <span id="balance">Balance: $1000</span>
+            <span id="earnings">Earnings: $0</span>
+            <span id="losses">Losses: $0</span>
+        </div>
+    </div>
+
+    <script src="frontend/app.js"></script>
+    <script src="frontend/plinkoLogic.js"></script>
+    <script src="frontend/ui.js"></script>
+</body>
+</html>
